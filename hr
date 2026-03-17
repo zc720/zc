@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>臧橙 - 员工关系岗个人简历与作品集</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft YaHei", sans-serif;
+        }
+        body {
+            background-color: #E9F1F6; /* 背景色：浅灰蓝 */
+            color: #333;
+            line-height: 1.8;
+            padding: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            color: #15559A; /* 主色：湖蓝 */
+            margin-bottom: 36px;
+            font-size: clamp(24px, 5vw, 32px);
+            font-weight: 600;
+        }
+        .card {
+            background: white;
+            padding: 28px;
+            margin-bottom: 24px;
+            border-radius: 12px;
+            box-shadow: 0 2px 15px rgba(21, 85, 154, 0.1); /* 主色浅阴影 */
+            transition: all 0.3s;
+            border-left: 4px solid #15559A; /* 主色边框 */
+        }
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 20px rgba(21, 85, 154, 0.15);
+        }
+        h2 {
+            color: #15559A; /* 主色标题 */
+            margin-bottom: 16px;
+            font-size: clamp(18px, 3vw, 22px);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        h2::before {
+            content: "";
+            width: 6px;
+            height: 22px;
+            background-color: #15559A; /* 主色装饰条 */
+            display: inline-block;
+        }
+        p {
+            color: #444;
+            margin-bottom: 12px;
+            font-size: clamp(14px, 2vw, 15px);
+        }
+        p strong {
+            color: #15559A; /* 主色强调文字 */
+        }
+        .btn {
+            display: inline-block;
+            padding: 11px 22px;
+            background: #15559A; /* 主色按钮 */
+            color: white;
+            border-radius: 8px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: none;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+        .btn:hover {
+            background: #0f4078; /* 深一度湖蓝 hover */
+            transform: translateY(-2px);
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 9998;
+            padding: 20px;
+            overflow-y: auto;
+        }
+        .modal-content {
+            background: white;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 12px;
+            max-width: 800px;
+            position: relative;
+        }
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 24px;
+            color: #15559A;
+            cursor: pointer;
+            background: none;
+            border: none;
+            z-index: 10;
+        }
+        video {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .copy-tip {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #15559A;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 16px;
+            opacity: 0;
+            transition: opacity 0.3s;
+            z-index: 9999;
+            text-align: center;
+        }
+        .copy-tip.show {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <h1>臧橙 - 员工关系岗个人简历与作品集</h1>
+
+    <!-- 模块一：个人简历 -->
+    <div class="card">
+        <h2>📄 个人简历</h2>
+        <p>西南政法大学本科2024级劳动关系专业学生，辅修自考本科法学二学历，深耕法学与劳动关系专业知识，兼具校园团务、活动策划等基层服务经验，政治立场坚定，具备良好的沟通协调、文案撰写与事务执行能力，高度匹配员工关系岗岗位工作需求。</p>
+        <p><strong>核心技能：</strong>持有英语CET-4证书；熟练掌握Office办公软件，擅长文案撰写、数据整理与PPT制作；拥有丰富的团务管理、主题活动策划与基层服务经验，沟通协调、落地执行与问题解决能力突出；<strong>预计大三至大四期间取得证书</strong>（注：此处已更新），政治素养良好，熟悉党建基础工作逻辑。</p>
+        <p><strong>求职方向：</strong>员工关系岗</p>
+        <!-- ✅ 简历按钮：新标签页打开预览+下载 -->
+        <button class="btn" onclick="window.open('员工关系岗臧橙西南政法大学本科2024级劳动关系专业.pdf','_blank')">查看/下载简历</button>
+    </div>
+
+    <!-- 模块二：个人作品集 -->
+    <div class="card">
+        <h2>🎬 个人作品集</h2>
+        <p>在校记者团视频编辑部任职期间，负责并参与多条校园主题短视频全流程制作，涵盖校园生活、校园风景、活动纪实、心理剧、赛事作品等类型，完成视频拍摄、素材采集、剪辑调色、配音字幕及封面制作，相关视频在学校官方抖音/视频号发布，获赞累计超1000+。</p>
+        <button class="btn" onclick="openVideoModal()">查看视频作品</button>
+    </div>
+
+    <!-- 模块三：关于我 -->
+    <div class="card">
+        <h2>💬 关于我</h2>
+        <p>本人政治立场坚定，性格沉稳细致、认真负责，具备良好的政治素养与职业操守，对员工关系岗工作充满热情，熟悉基层团务与党建基础工作的基本流程。</p>
+        <p>校园多岗位统筹经历培养了较强的沟通协调、落地执行与问题解决能力，擅长团队协作，具备良好的服务意识与大局观，能快速适配员工关系岗岗位的工作节奏，高效完成相关主题活动策划、基层事务执行、文案整理等工作。</p>
+        <button class="btn" onclick="copyEmail()">复制邮箱：18242458916@163.com</button>
+    </div>
+
+    <!-- 复制成功提示框 -->
+    <div class="copy-tip" id="copyTip">邮箱复制成功！</div>
+
+    <!-- 视频弹窗 -->
+    <div class="modal" id="videoModal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeVideoModal()">×</button>
+
+            <h3>西政er的冬日夜生活</h3>
+            <p>校园生活类短视频，学校官方抖音发布，获赞800+，全流程负责拍摄、剪辑、字幕制作</p>
+            <button class="btn" onclick="window.open('https://pan.baidu.com/s/1WuboSBMVMq6zE5CjzpHgfQ?pwd=1111','_blank')">播放视频</button>
+
+            <h3 style="margin-top:20px;">西南政法大学机关工会健康校园行</h3>
+            <p>校园活动纪实视频，学校微信官方视频号发布，负责素材采集、剪辑、调色</p>
+            <button class="btn" onclick="window.open('https://pan.baidu.com/s/1-tyeFfesFc0sOPdZdubGSw?pwd=1111','_blank')">播放视频</button>
+
+            <h3 style="margin-top:20px;">沙漏心理剧</h3>
+            <p>校园心理剧作品，负责拍摄、剪辑、后期制作</p>
+            <button class="btn" onclick="window.open('https://pan.baidu.com/s/1xyRos_xetHNIquvUytRNxg?pwd=1111','_blank')">播放视频</button>
+
+            <h3 style="margin-top:20px;">ESG比赛参赛视频</h3>
+            <p>ESG主题参赛视频，负责剪辑、字幕、封面制作，团队作品获校级奖项</p>
+            <button class="btn" onclick="window.open('https://pan.baidu.com/s/1FsqvJILFdKxA5WqwZtRIhQ?pwd=1111','_blank')">播放视频</button>
+        </div>
+    </div>
+
+    <script>
+        // 打开视频弹窗
+        function openVideoModal(){document.getElementById('videoModal').style.display='block';}
+        // 关闭视频弹窗
+        function closeVideoModal(){document.getElementById('videoModal').style.display='none';}
+        // 复制邮箱
+        function copyEmail(){
+            navigator.clipboard.writeText('18242458916@163.com').then(()=>{
+                const t=document.getElementById('copyTip');
+                t.classList.add('show');
+                setTimeout(()=>t.classList.remove('show'),3000);
+            });
+        }
+        // 点击模态框外部关闭
+        window.onclick=e=>{const m=document.getElementById('videoModal');e.target===m&&closeVideoModal();}
+    </script>
+</body>
+</html>
